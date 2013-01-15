@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E2E88FC-0892-4D6F-909D-E24C5D0A66B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkSaver</RootNamespace>
+    <AssemblyName>LinkSaver</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ELinq">
+      <HintPath>..\packages\ELinq.0.5.2.0\lib\net40\ELinq.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\..\..\IrisSkin2\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="NLite">
+      <HintPath>..\packages\NLite.0.9.5.5\lib\net40\NLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.1.0.84.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.1.0.84.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Link.cs" />
+    <Compile Include="Northwind.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="ELinq.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="skins\Carlmness\Calmness.ssk" />
+    <None Include="skins\Carlmness\CalmnessColor1.ssk" />
+    <None Include="skins\Carlmness\CalmnessColor2.ssk" />
+    <None Include="skins\Carlmness\Thumbs.db" />
+    <None Include="skins\Deep\DeepCyan.ssk" />
+    <None Include="skins\Deep\DeepGreen.ssk" />
+    <None Include="skins\Deep\DeepOrange.ssk" />
+    <None Include="skins\Deep\Thumbs.db" />
+    <None Include="skins\Diamond\DiamondBlue.ssk" />
+    <None Include="skins\Diamond\DiamondGreen.ssk" />
+    <None Include="skins\Diamond\Thumbs.db" />
+    <None Include="skins\Eighteen\Eighteen.ssk" />
+    <None Include="skins\Eighteen\EighteenColor1.ssk" />
+    <None Include="skins\Eighteen\EighteenColor2.ssk" />
+    <None Include="skins\Eighteen\Thumbs.db" />
+    <None Include="skins\Emerald\Emerald.ssk" />
+    <None Include="skins\Emerald\EmeraldColor1.ssk" />
+    <None Include="skins\Emerald\EmeraldColor2.ssk" />
+    <None Include="skins\Emerald\EmeraldColor3.ssk" />
+    <None Include="skins\Emerald\Thumbs.db" />
+    <None Include="skins\Glass\GlassBrown.ssk" />
+    <None Include="skins\Glass\GlassGreen.ssk" />
+    <None Include="skins\Glass\GlassOrange.ssk" />
+    <None Include="skins\Glass\Thumbs.db" />
+    <None Include="skins\Longhorn\Longhorn.ssk" />
+    <None Include="skins\Longhorn\Thumbs.db" />
+    <None Include="skins\MacOS\MacOS.ssk" />
+    <None Include="skins\MacOS\Thumbs.db" />
+    <None Include="skins\Midsummer\Midsummer.ssk" />
+    <None Include="skins\Midsummer\MidsummerColor1.ssk" />
+    <None Include="skins\Midsummer\MidsummerColor2.ssk" />
+    <None Include="skins\Midsummer\MidsummerColor3.ssk" />
+    <None Include="skins\Midsummer\Thumbs.db" />
+    <None Include="skins\MP10\MP10.ssk" />
+    <None Include="skins\MP10\Thumbs.db" />
+    <None Include="skins\MSN\MSN.ssk" />
+    <None Include="skins\MSN\Thumbs.db" />
+    <None Include="skins\One\OneBlue.ssk" />
+    <None Include="skins\One\OneCyan.ssk" />
+    <None Include="skins\One\OneGreen.ssk" />
+    <None Include="skins\One\OneOrange.ssk" />
+    <None Include="skins\One\Thumbs.db" />
+    <None Include="skins\Page\Page.ssk" />
+    <None Include="skins\Page\PageColor1.ssk" />
+    <None Include="skins\Page\PageColor2.ssk" />
+    <None Include="skins\Page\Thumbs.db" />
+    <None Include="skins\RealOne\RealOne.ssk" />
+    <None Include="skins\RealOne\Thumbs.db" />
+    <None Include="skins\Silver\Silver.ssk" />
+    <None Include="skins\Silver\SilverColor1.ssk" />
+    <None Include="skins\Silver\SilverColor2.ssk" />
+    <None Include="skins\Silver\Thumbs.db" />
+    <None Include="skins\Sports\SportsBlack.ssk" />
+    <None Include="skins\Sports\SportsBlue.ssk" />
+    <None Include="skins\Sports\SportsCyan.ssk" />
+    <None Include="skins\Sports\SportsGreen.ssk" />
+    <None Include="skins\Sports\SportsOrange.ssk" />
+    <None Include="skins\Sports\Thumbs.db" />
+    <None Include="skins\Steel\SteelBlack.ssk" />
+    <None Include="skins\Steel\SteelBlue.ssk" />
+    <None Include="skins\Steel\Thumbs.db" />
+    <None Include="skins\Vista1\Thumbs.db" />
+    <None Include="skins\Vista1\vista1.ssk" />
+    <None Include="skins\Vista1\vista1_green.ssk" />
+    <None Include="skins\Vista2\Thumbs.db" />
+    <None Include="skins\Vista2\Vista2_color1.ssk" />
+    <None Include="skins\Vista2\Vista2_color2.ssk" />
+    <None Include="skins\Vista2\Vista2_color3.ssk" />
+    <None Include="skins\Vista2\Vista2_color4.ssk" />
+    <None Include="skins\Vista2\Vista2_color5.ssk" />
+    <None Include="skins\Vista2\Vista2_color6.ssk" />
+    <None Include="skins\Vista2\Vista2_color7.ssk" />
+    <None Include="skins\Warm\Thumbs.db" />
+    <None Include="skins\Warm\Warm.ssk" />
+    <None Include="skins\Warm\WarmColor1.ssk" />
+    <None Include="skins\Warm\WarmColor2.ssk" />
+    <None Include="skins\Warm\WarmColor3.ssk" />
+    <None Include="skins\Wave\Thumbs.db" />
+    <None Include="skins\Wave\Wave.ssk" />
+    <None Include="skins\Wave\WaveColor1.ssk" />
+    <None Include="skins\Wave\WaveColor2.ssk" />
+    <None Include="skins\WinXP\Thumbs.db" />
+    <None Include="skins\WinXP\XPBlue.ssk" />
+    <None Include="skins\WinXP\XPGreen.ssk" />
+    <None Include="skins\WinXP\XPOrange.ssk" />
+    <None Include="skins\WinXP\XPSilver.ssk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\ico1.ico" />
+    <Content Include="images\ico2.ico" />
+    <Content Include="Northwind.Mapping.xml" />
+    <Content Include="skins\Carlmness\calmness.gif" />
+    <Content Include="skins\Carlmness\calmness_color1.gif" />
+    <Content Include="skins\Carlmness\calmness_color2.gif" />
+    <Content Include="skins\Deep\deepcyan.gif" />
+    <Content Include="skins\Deep\deepgreen.gif" />
+    <Content Include="skins\Deep\deeporange.gif" />
+    <Content Include="skins\Diamond\diamondblue.gif" />
+    <Content Include="skins\Diamond\diamondgreen.gif" />
+    <Content Include="skins\Eighteen\eighteen.gif" />
+    <Content Include="skins\Eighteen\eighteen_color1.gif" />
+    <Content Include="skins\Eighteen\eighteen_color2.gif" />
+    <Content Include="skins\Emerald\emerald.gif" />
+    <Content Include="skins\Emerald\emerald_color1.gif" />
+    <Content Include="skins\Emerald\emerald_color2.gif" />
+    <Content Include="skins\Emerald\emerald_color3.gif" />
+    <Content Include="skins\Glass\glassbrown.gif" />
+    <Content Include="skins\Glass\glassgreen.gif" />
+    <Content Include="skins\Glass\glassorange.gif" />
+    <Content Include="skins\Longhorn\longhorn.gif" />
+    <Content Include="skins\MacOS\macos.gif" />
+    <Content Include="skins\Midsummer\midsummer.gif" />
+    <Content Include="skins\Midsummer\midsummer_color1.gif" />
+    <Content Include="skins\Midsummer\midsummer_color2.gif" />
+    <Content Include="skins\Midsummer\midsummer_color3.gif" />
+    <Content Include="skins\MP10\mp10.gif" />
+    <Content Include="skins\MSN\msn.gif" />
+    <Content Include="skins\One\oneblue.gif" />
+    <Content Include="skins\One\onecyan.gif" />
+    <Content Include="skins\One\onegreen.gif" />
+    <Content Include="skins\One\oneorange.gif" />
+    <Content Include="skins\Page\page.gif" />
+    <Content Include="skins\Page\page_color1.gif" />
+    <Content Include="skins\Page\page_color2.gif" />
+    <Content Include="skins\RealOne\realone.gif" />
+    <Content Include="skins\Silver\silver.gif" />
+    <Content Include="skins\Silver\silver_color1.gif" />
+    <Content Include="skins\Silver\silver_color2.gif" />
+    <Content Include="skins\Sports\sportsblack.gif" />
+    <Content Include="skins\Sports\sportsblue.gif" />
+    <Content Include="skins\Sports\sportscyan.gif" />
+    <Content Include="skins\Sports\sportsgreen.gif" />
+    <Content Include="skins\Sports\sportsorange.gif" />
+    <Content Include="skins\Steel\steelblack.gif" />
+    <Content Include="skins\Steel\steelblue.gif" />
+    <Content Include="skins\Vista1\vista1.gif" />
+    <Content Include="skins\Vista1\vista1_green.gif" />
+    <Content Include="skins\Vista2\vista2_color1.gif" />
+    <Content Include="skins\Vista2\vista2_color2.gif" />
+    <Content Include="skins\Vista2\vista2_color3.gif" />
+    <Content Include="skins\Vista2\vista2_color4.gif" />
+    <Content Include="skins\Vista2\vista2_color5.gif" />
+    <Content Include="skins\Vista2\vista2_color6.gif" />
+    <Content Include="skins\Vista2\vista2_color7.gif" />
+    <Content Include="skins\Warm\warm.gif" />
+    <Content Include="skins\Warm\warm_color1.gif" />
+    <Content Include="skins\Warm\warm_color2.gif" />
+    <Content Include="skins\Warm\warm_color3.gif" />
+    <Content Include="skins\Wave\wave.gif" />
+    <Content Include="skins\Wave\wave_color1.gif" />
+    <Content Include="skins\Wave\wave_color2.gif" />
+    <Content Include="skins\WinXP\xpblue.gif" />
+    <Content Include="skins\WinXP\xpgreen.gif" />
+    <Content Include="skins\WinXP\xporange.gif" />
+    <Content Include="skins\WinXP\xpsilver.gif" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
