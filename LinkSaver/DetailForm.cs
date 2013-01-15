@@ -10,16 +10,16 @@ using NLite.Data;
 
 namespace LinkSaver
 {
-    public partial class Form1 : Form
+    public partial class DetailForm : Form
     {
-        public Form1()
+        public DetailForm()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            skinEngine1.SkinFile = (Application.StartupPath + "\\skins\\Page\\Page.ssk" );
+            //skinEngine1.SkinFile = (Application.StartupPath + "\\skins\\Page\\Page.ssk" );
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -45,5 +45,6 @@ namespace LinkSaver
             }
 
         }
+
     }
 }
