@@ -58,7 +58,7 @@ namespace LinkSaver
 
         private void btnAddLink_Click(object sender, EventArgs e)
         {
-            new DetailForm().ShowDialog();
+            new DetailForm().ShowDialog(this);
         }
     }
 }
