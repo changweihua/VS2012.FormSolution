@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceApplication", "Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkSaver", "LinkSaver\LinkSaver.csproj", "{4E2E88FC-0892-4D6F-909D-E24C5D0A66B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginApplication1", "PluginApplication1\PluginApplication1.csproj", "{CC92F2E4-BE06-45F6-90CD-0FF2B2805183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChromiumApplication", "ChromiumApplication\ChromiumApplication.csproj", "{AB22C2EB-7C21-4A99-984B-98960E33D256}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{4E2E88FC-0892-4D6F-909D-E24C5D0A66B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E2E88FC-0892-4D6F-909D-E24C5D0A66B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E2E88FC-0892-4D6F-909D-E24C5D0A66B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC92F2E4-BE06-45F6-90CD-0FF2B2805183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC92F2E4-BE06-45F6-90CD-0FF2B2805183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC92F2E4-BE06-45F6-90CD-0FF2B2805183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC92F2E4-BE06-45F6-90CD-0FF2B2805183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB22C2EB-7C21-4A99-984B-98960E33D256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB22C2EB-7C21-4A99-984B-98960E33D256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB22C2EB-7C21-4A99-984B-98960E33D256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB22C2EB-7C21-4A99-984B-98960E33D256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
