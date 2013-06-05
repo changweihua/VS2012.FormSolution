@@ -59,5 +59,27 @@ namespace FormSolution
         {
             MessageBox.Show(richTextBox1.SelectedRtf);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
+        }
+
+        void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.comboBox1.Items.Clear();
+            switch (this.tabControl1.SelectedIndex)
+            {
+                case 0:
+                    this.comboBox1.Items.Add("TabPage1");
+                    break;
+                case 1:
+                    this.comboBox1.Items.Add("TabPage2");
+                    break;
+                default:
+                    break;
+            }
+            this.comboBox1.SelectedIndex = 0;
+        }
     }
 }

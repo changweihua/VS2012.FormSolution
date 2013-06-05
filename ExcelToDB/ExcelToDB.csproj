@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E0B5C2F-D42C-4543-97C0-60ED56751617}</ProjectGuid>
+    <ProjectGuid>{F2049BF6-5EA5-4091-B7C4-FC7B0AE9E6AC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FormSolution</RootNamespace>
-    <AssemblyName>FormSolution</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>ExcelToDB</RootNamespace>
+    <AssemblyName>ExcelToDB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,10 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IrisSkin2">
-      <HintPath>..\..\..\DLL\IrisSkin\IrisSkin2.dll</HintPath>
+      <HintPath>..\..\..\IrisSkin2\IrisSkin2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Excel2Oracle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Excel2Oracle.Designer.cs">
+      <DependentUpon>Excel2Oracle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Excel2Oracle.resx">
+      <DependentUpon>Excel2Oracle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,7 +79,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,10 +91,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Warm.ssk" />
+    <None Include="skins\Page\Page.ssk" />
+    <None Include="skins\Page\PageColor1.ssk" />
+    <None Include="skins\Page\PageColor2.ssk" />
+    <None Include="skins\Page\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Content Include="skins\Page\page.gif" />
+    <Content Include="skins\Page\page_color1.gif" />
+    <Content Include="skins\Page\page_color2.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
